@@ -1,0 +1,22 @@
+{
+  "name": "1day_s",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "axios": "^0.23.0",
+    "vue-axios": "^3.3.7",
+    "vue.js": "^0.3.2",
+    "webpack": "^5.59.0"
+  }
+}

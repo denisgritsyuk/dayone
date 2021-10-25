@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <br>
+        <div id="n1" >
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Name</th>
+                    <th>Group</th>
+                    <th>Mark</th>
+                    <th>PR is Done</th>
+                </tr>
+                <tr v-for="stud in students">
+                    <td><img v-bind:src="stud.photo" width="50px"></td>
+                    <td v-bind:style="stud.name.indexOf(search)>-1 && search.length >0 ? 'background-color:#CA2C2C' : 'background-color:#fff'">{{stud.name}}</td>
+                    <td>{{stud.group}}</td>
+                    <td>{{stud.mark}}</td>
+                    <td><input type="checkbox" v-bind:checked="stud.isDonePr"></td>
+                </tr>
+            </table>
+
+            <br>Enter amount: <input type="number" value="100" v-model="start_value">
+            <br>Convert from <input list="currency"  v-model="start_ccy">
+            <datalist id="currency">
+              <option value="USD">
+              <option value="EUR">
+              <option value="RUR">
+            </datalist>
+            to <input list="currency" v-model="end_ccy">
+            <button v-on:click="convert">Convert</button>
+            <br>{{result}}
+</div>
+<style>
+    td,th{
+        border: 1px solid;
+    }
+</style>
+
+        <script src="main.js"></script>
+    </body>
+</html>
